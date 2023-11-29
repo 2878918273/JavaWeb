@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //attr
+            // alert( $(":checkbox:first").attr("name") ); // 获取
+            // $(":checkbox:first").attr("name","abc") ; // 设置
+
+            // $(":checkbox").prop("checked",false );// 官方觉得返回undefined是一个错误
+
+            // $(":checkbox:first").attr("abc","abcValue");
+            // alert( $(":checkbox:first").attr("abc") );
+
+            // $("<h1>标题</h1>").prependTo( $("div") );
+            // $("<h1>标题</h1>").insertAfter("div");
+
+            // $("<h1>标题</h1>").insertBefore( $("div") );
+
+            // $("<h1>标题</h1>").replaceWith("div");
+
+            // $("div").replaceWith( $("<h1>标题</h1>") );
+
+            // $("<h1>标题</h1>").replaceAll( "div" );
+
+
+            // $("div").empty();
+            // $("<h1>标题1</h1>").prependTo("body");
+            // $("<h2>标题2</h2>").appendTo("div");
+
+            // $("<h2>标题2</h2>").insertAfter("div");
+            // $("<h2>标题3</h2>").insertBefore("div");
+
+
+            // $("div").replaceWith($("<h2>标题3</h2>"));
+            // $("<h2>标题3</h2>").replaceAll($("div"));
+
+            // $("div").remove();
+            $("div").empty();
+        });
+
+
+    </script>
+</head>
+<body>
+    <br/>
+    多选：
+    <input name="checkbox" type="checkbox" checked="checked" value="checkbox1" />checkbox1
+    <input name="checkbox" type="checkbox" value="checkbox2" />checkbox2
+    <br/><br/>
+    <div>1234</div>
+    <div>1234</div>
+</body>
+</html>
+<!--
+内部插入：
+appendTo()      a.appendTo(b)    把a插入到b子元素的末尾，成为最后一个子元素
+prependTo()     a.prependTo(b)   把a插到b所有子元素前面，成为第一个子元素
+外部插入：同级
+insertAfter()   a.insertAfter(b)  得到ba
+insertBefore()  a.insertBefore(b) 得到ab
+
+替换：
+replaceWith()   a.replaceWith(b) 用b替换掉a
+replaceAll()    a.replaceAll(b)  用a替换掉所有b
+
+删除：
+remove()        a.remove()      删除a标签
+empty()         a.empty();      清空a标签里的内容

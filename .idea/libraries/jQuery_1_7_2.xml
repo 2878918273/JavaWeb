@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="jQuery 1.7.2" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="jQuery" />
+      <option name="frameworkVersion" value="1.7.2" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/10_Cookie_Session_Filter_JSON_AJAX/web/script/jquery-1.7.2.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/10_Cookie_Session_Filter_JSON_AJAX/web/script/jquery-1.7.2.js" />
+    </CLASSES>
+    <DOCUMENTATION>
+      <root url="http://api.jquery.com" />
+    </DOCUMENTATION>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

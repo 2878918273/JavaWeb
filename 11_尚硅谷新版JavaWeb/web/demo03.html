@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="script/vue.js"></script>
+    <script language="JavaScript" src="script/axios.min.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            var vue = new Vue({
+                "el": "#div1",
+                data: {
+                    uname: "name1",
+                    pwd: "abc123",
+                },
+                methods: {
+                    axios01: function () {
+                        axios({
+                            method: "POST",
+                            url: "/axios01.do",
+                            params: {
+                                uname: vue.uname,
+                                pwd: vue.pwd
+                            }
+                        })
+                            .then(function (value) {
+                            })
+                            .catch(function (reason) {
+                            })
+                    },
+
+                }
+            });
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    uname:<input type="text" v-model="uname"/> <br/>
+    pwd:<input type="text" v-model="pwd"/> <br/>
+    <input type="button" @click="axios01" value="发射一个普通的异步请求">
+
+</div>
+
+</body>
+</html>

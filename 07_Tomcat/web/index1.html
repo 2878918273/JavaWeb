@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+这是web下的index.html</br>
+<a href="a/b/c.html">a/b/c.html</a> <br/>
+<a href="http://localhost:8080/07_Tomcat/ForwardC">请求转发：a/b/c.html</a> <br />
+<a href="/">"/"</a>
+</body>
+</html>
+<!--
+    当我们点击a标签进行跳转的时候，浏览器地址栏中的地址是http://localhost:8080/07_Tomcat/a/b/c.html
+    跳转回去的a标签路径是../../index1.html
+    所有相对路径在工作的时候都会参照当前浏览器地址栏中的地址来进行跳转。
+    那么参照后得到的地址是：
+    http://localhost:8080/07_Tomcat/index1.html
+    （正确的跳转路径）
+
+    base标签可以设置当前页面中所有相对路径工作时，参照哪个路径来进行跳转
+
+    当我们使用请求转发来进行跳转的时候，浏览器地址栏中的地址是http://localhost:8080/07_Tomcat/ForwardC
+    跳转回去的a标签路径是：../../index1.html
+    所有相对路径在工作的时候都会参照当前浏览器地址栏中的地址来进行跳转
+    那么参照后得到的地址是：
+    http://localhost:8080/index1.html
+    （错误的路径）
+
+   补充：Web中的相对路径和绝对路径
+        在javaWeb中，路径分为相对路径和绝对路径两种：
+            相对路径：
+                .        当前目录下
+                ..       表示上一级目录
+                资源名    表示当前目录/资源名
+
+            绝对路径：
+                http://ip:port/工程路径/资源路径
+
+   web中/斜杠的不同意义
+   在web中 / 是一种绝对路径
+   / 斜杠如果被浏览器解析，得到的地址是:http://ip:port/
+
+   / 斜杠 如果被服务器解析，得到的地址是：http://ip:port/工程路径
+
+   特殊情况：reponse.sendRediect("/"),把斜杠发送给浏览器解析
+
+
+-->

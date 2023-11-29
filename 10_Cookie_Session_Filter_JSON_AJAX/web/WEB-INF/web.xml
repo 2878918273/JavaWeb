@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>_1_Cookie</servlet-name>
+        <servlet-class>_1_Cookie._1_Cookie</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>_1_Cookie</servlet-name>
+        <url-pattern>/_1_Cookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>_1_Cookie.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>_2_Session.SessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/SessionServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 表示当前web工程。创建出来的所有Session默认是20分钟 超时时长   -->
+    <session-config>
+        <session-timeout>20</session-timeout>
+    </session-config>
+
+    <!--  filter标签用于配置一个Filter过滤器  -->
+    <filter>
+        <!--   给filter起一个别名     -->
+        <filter-name>AdminFilter</filter-name>
+        <!--   配置filter的全类名     -->
+        <filter-class>_3_Filter.AdminFilter</filter-class>
+
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>you daddy</param-value>
+        </init-param>
+        <init-param>
+            <param-name>age</param-name>
+            <param-value>100000</param-value>
+        </init-param>
+    </filter>
+
+    <!--  filter-mapping配置Filter过滤器的拦截路径  -->
+    <filter-mapping>
+        <!--   filter-name表示当前的拦截路径给哪个filter使用     -->
+        <filter-name>AdminFilter</filter-name>
+        <!-- url-pattern配置拦截路径
+             /表示请求地址为http://ip:port/工程路径/ 映射到IDEA的web目录
+             /admin/* 表示请求地址为：http://ip:port/工程路径/admin/*
+        -->
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>Filter1</filter-name>
+        <filter-class>_3_Filter.Filter1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filter1</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>Filter2</filter-name>
+        <filter-class>_3_Filter.Filter2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filter2</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>LoginServlet1</servlet-name>
+        <servlet-class>_3_Filter.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet1</servlet-name>
+        <url-pattern>/LoginServlet1</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AjaxServlet</servlet-name>
+        <servlet-class>_5_AJAX.AjaxServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/ajaxServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //表示要求字符串中，是否包含字母e
+        // var patt = new RegExp("e");
+        // var patt = /e/; //也是正则表达式对象
+        // var patt = /[abc]/; //表示查找字符串，是否包含字母a或b或c
+        //表示查找字符串中是否包含小写字母
+        // var patt = /[a-z]/;
+        //表示查找字符串中是否包含大写字母
+        // var patt = /[A-Z]/;
+        //表示查找字符串中是否包含任意数字
+        // var patt = /[0-9]/;
+        //表示字符串中是否包含了字母、数字、下划线
+        // var patt =/\w/;
+        //表示字符串中是否至少包含一个a
+        // var patt =/a+/;
+        //表示字符串中是否“包含”零个或多个a
+        // var patt = /a*/;
+        //表示字符串中是否“包含”零个或一个a
+        // var patt = /a?/;
+        //表示字符串中是否包含连续的三个a
+        // var patt = /a{3}/;
+        //表示字符串中是否包含至少3到5个连续的a
+        // var patt = /a{3,5}/;
+        //表示要求 字符串是否包含至少3个连续的a
+        // var patt = /a{3,}/;
+        //表示字符串中是否以a结尾
+        // var patt = /a$/;
+        //表示字符串中是否以a开头
+        // var patt = /^a/;
+        //要求字符串从头到尾都必须完全匹配
+        var patt =/^a{3,5}$/;
+
+
+        var str ="aaaaaaa";
+        // var str = "a12423as2321a";
+        // var str = "a{}{}}{sdaaaaaaaadaa1_a";
+        alert(patt.test(str))
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+<!--
+正则表达式是描述字符模式的对象
+正则表达式用于对字符串模式匹配及检索替换，是对字符串执行模式匹配的强大工具
+-->
+

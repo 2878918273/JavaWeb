@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+        var btnObj = $("span");
+
+        for(var i = 0 ; i <btnObj.length ; i++){
+            alert(btnObj[i]); //[object HTMLSpanElement]
+        }
+        });
+
+        //--p70---------------------------------------------------------
+        //查找所有span元素和id为two的元素
+        $(function{
+            $("#btn").click(function(){
+                $("spab,#two").css(name,value);
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+<button id="btnid">我为天帝，当镇杀世间一切敌</button>
+<div>
+    <span>div-span1</span>
+    <span>div-span2</span>
+    <span>div-span3</span>
+</div>
+
+</body>
+</html>
+<!--
+4. jQuery对象和dom对象区分
+4.1什么是jQuery对象，什么是Dom对象
+    Dom
+        1.通过getElementById()查询出来的标签对象是Dom对象
+        2.通过getElementsByName()查询出来的标签对象是Dom对象
+        3.通过getElementsByTagName()查询出来的标签对象是Dom对象
+        4.通过createElement()方法创建的对象，是Dom对象
+    Dom对象alert出来的效果是：[object HTML标签名Element]
+
+   jQuery
+        1.通过jQuery提供的API创建的对象，是jQuery对象
+        2.通过jQuery包装的Dom对象也是jQuery对象
+        3.通过jQuery提供的API查询到的对象，是jQuery对象
+    jQuery对象alert出来的效果是：[object Object]
+
+4.2 jQuery对象的本质是什么？
+jQuery对象是dom对象的数组 + jQuery提供的一系列功能函数
+
+4.3 jQuery对象和Dom对象的使用区别
+jQuery对象不能使用DOM对象的属性和方法
+DOM对象也不能使用jQuery对象的属性和方法
+
+4.4jQuery对象和Dom对象互转
+1.dom对象转化为jQuery对象(*重点)
+    先有DOM对象
+    $(DOM对象)就可以转换成为jQuery对象
+2.jQuery对象转换为dom对象(*重点)
+    先有jQuery对象
+    jQuery对象[下标]取出相应的DOM对象
+
+
+5.jQuery选择器(*****重点)
+5.1基本选择器
+#ID         ：根据id查找标签对象
+.class      ：根据class查找标签对象
+element     ：根据标签名查找标签对象
+*           ：表示任意的，所有的元素
+selector1,selector2 ：合并选择器1，选择器2的结果并返回
+
+补充：1. p.MyClass 标签名必须是p标签，而且class类型还要是MyClass
+     2. 返回结果的顺序是根据HTML页面的标签顺序来的
+
+
+-->

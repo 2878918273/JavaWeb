@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <script type="text/javascript">
+        // 2.1）json的定义
+        var jsonObj = {
+            "key1": 16,
+            "key2": "abc",
+            "key3": true,
+            "key4": [15, "aa", false],
+            "key5": {
+                "key5_1": 11,
+                "key5_2": "bb"
+            },
+            "key6": [{
+                "key6_1": true,
+                "key6_2": "cc"
+            }, {
+                "key6_3": false,
+                "key6_4": "dd"
+            }]
+        };
+        // 2.2）json的访问
+        // alert(jsonObj.key4[0]);
+        // alert(jsonObj.key5.key5_2);
+        // alert(jsonObj.key6[0].key6_1);
+        // alert(jsonObj.key6[1].key6_4);
+
+        // 2.3）json的两个常用方法
+        // JSON.stringify()
+        // alert(jsonObj);
+        var stringJson =JSON.stringify(jsonObj);
+        // alert(stringJson);
+        // JSON.parse()
+        var objJson =JSON.parse(stringJson);
+        // alert(objJson);
+        alert(objJson.key1);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

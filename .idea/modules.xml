@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_html_css_javaScript/01_html_css_javaScript.iml" filepath="$PROJECT_DIR$/01_html_css_javaScript/01_html_css_javaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_jQuery/02_jQuery.iml" filepath="$PROJECT_DIR$/02_jQuery/02_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_jQuery/03_jQuery.iml" filepath="$PROJECT_DIR$/03_jQuery/03_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_book_static/05_book_static.iml" filepath="$PROJECT_DIR$/05_book_static/05_book_static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_XML/06_XML.iml" filepath="$PROJECT_DIR$/06_XML/06_XML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_Tomcat/07_Tomcat.iml" filepath="$PROJECT_DIR$/07_Tomcat/07_Tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_jsp/08_jsp.iml" filepath="$PROJECT_DIR$/08_jsp/08_jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_EL_JSTL/09_EL_JSTL.iml" filepath="$PROJECT_DIR$/09_EL_JSTL/09_EL_JSTL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_Cookie_Session_Filter_JSON_AJAX/10_Cookie_Session_Filter_JSON_AJAX.iml" filepath="$PROJECT_DIR$/10_Cookie_Session_Filter_JSON_AJAX/10_Cookie_Session_Filter_JSON_AJAX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_尚硅谷新版JavaWeb/11_尚硅谷新版JavaWeb.iml" filepath="$PROJECT_DIR$/11_尚硅谷新版JavaWeb/11_尚硅谷新版JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Maven/Maven.iml" filepath="$PROJECT_DIR$/Maven/Maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring6/Spring6.iml" filepath="$PROJECT_DIR$/Spring6/Spring6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/书城项目/书城项目.iml" filepath="$PROJECT_DIR$/书城项目/书城项目.iml" />
+    </modules>
+  </component>
+</project>

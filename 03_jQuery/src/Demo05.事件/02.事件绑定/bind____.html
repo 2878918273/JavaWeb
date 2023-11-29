@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // $(".head").click(function(){
+            // 	alert("h5单击事件");
+            // });
+
+            $(".head").live("click",function(){
+                alert("h5单击事件");
+            });
+
+            $("<h5 class=\"head\">什么是jQuery?</h5>").appendTo("div");
+
+            // $("button").click(function(){
+            // 	$(".head").click();
+            // })
+            //
+            // $(".head").mouseover(function(){
+            // 	console.log("来咯");
+            // });
+            //
+            //
+            // $(".head").mouseout(function(){
+            // 	console.log("走咯");
+            // });
+
+            //使用bind绑定事件
+            $(".head").bind("click mouseover mouseout",function(){
+                console.log("bind绑定多个事件");
+            });
+
+            //使用one绑定事件
+            // $(".head").one("click mouseover mouseout",function(){
+            //     console.log("bind绑定多个事件");
+            // });
+
+            // $(".head").unbind("click mouseover");
+
+
+        });
+
+    </script>
+</head>
+<body>
+<div id="panel">
+    <h5 class="head">什么是jQuery?</h5>
+    <div class="content">
+        jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由 John Resig
+        创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。
+    </div>
+    <button>按钮</button>
+</div>
+</body>
+
+</html>
+<!--
+jQuery中其它的事件处理方法：
+click()			它可以绑定单击事件，以及触发单击事件
+mouseover()		鼠标移入事件
+mouseout()		鼠标移出事件
+bind()          可以给元素一次性绑定一个或多个事件。
+one()           使用上跟bind一样。但是one方法绑定的事件只会响应一次。
+unbind()        跟bind方法相反的操作，解除事件的绑定
+live()          也是用来绑定事件。它可以用来绑定选择器匹配的所有元素的事件。哪怕这个元素是后面动态创建出来的也有效
+
+
+
+-->
+

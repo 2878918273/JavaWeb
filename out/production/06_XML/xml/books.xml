@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    <?xml version="1.0" encoding="utf-8" ?>
+    以上内容就是xml文件的声明
+    version="1.0"       version 表示xml的版本
+    encoding="utf-8"    encoding表示xml文件本身的编码
+
+-->
+
+
+<books>  <!--books 表示多个小说信息-->
+    <book sn="SN23567327"> <!--books表示一个小说信息  sn属性表示小说的序列号-->
+        <name>王林</name>   <!--name 主角姓名-->
+        <title>仙逆</title>   <!--title 书名-->
+        <author>耳根</author> <!--author 作者-->
+    </book>
+
+    <book sn="SN78934227"> <!--books表示一个小说信息  sn属性表示小说的序列号-->
+        <name>叶凡</name>   <!--name 主角姓名-->
+        <title>遮天</title>   <!--title 书名-->
+        <author>辰东</author> <!--author 作者-->
+    </book>
+    <book sn="SN225683327"> <!--books表示一个小说信息  sn属性表示小说的序列号-->
+        <name>石昊</name>   <!--name 主角姓名-->
+        <title>完美世界</title>   <!--title 书名-->
+        <author>辰东</author> <!--author 作者-->
+    </book>
+
+</books>

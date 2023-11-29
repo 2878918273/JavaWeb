@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="script/vue.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            var vue = new Vue({
+                "el": "#div1",
+                data: {
+                    fruitList: [
+                        {username: "琉璃", password: "abc123", age: 16},
+                        {username: "叶天帝", password: "abc123", age: 10000},
+                        {username: "荒", password: "abc123", age: 150000},
+                        {username: "王林", password: "abc123", age: 23421}
+                    ]
+                }
+            });
+
+            var vue2 = new Vue({
+                "el": "#div2",
+                data: {
+                    msg: "我为天帝",
+                },
+                methods: {
+                    myReverse: function () {
+                        this.msg = this.msg.split("").reverse().join("");
+                    }
+                }
+            });
+
+            var vue3 = new Vue({
+                "el":"#div3",
+                data:{
+                    num1:1,
+                    num2:2,
+                    num3:0
+                },
+                watch:{
+                    /*
+                    侦听属性num1和num2
+                    当num1的值有改动的时候，那么需要调用后面定义的方法，value指的是num1的新值
+                    */
+                    num1:function(value){
+                        this.num3 = parseInt(value) + parseInt(this.num2);
+                    },
+                    num2:function(newValue){
+                        this.num3 = parseInt(this.num1) + parseInt(newValue);
+                    }
+                }
+            });
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <table border="1" width="400" cellpadding="4" cellspacing="0">
+        <tr>
+            <th>用户</th>
+            <th>密码</th>
+            <th>年龄</th>
+        </tr>
+        <!--   v-for表示迭代     -->
+        <tr v-for="fruit in fruitList">
+            <th>{{fruit.username}}</th>
+            <th>{{fruit.password}}</th>
+            <th>{{fruit.age}}</th>
+        </tr>
+    </table>
+</div>
+
+<hr>
+<br><br><br>
+<hr>
+<!--div2.--------------------------------------------------------------------------------------------------------------->
+
+<div id="div2">
+    <span>{{msg}}</span>
+    <!--  v-on:click 表示绑定点击事件  -->
+    <!--  v-on可以省略，变成@click  -->
+    <input type="button" value="反转" v-on:click="myReverse">
+</div>
+
+<hr>
+<br><br><br>
+<hr>
+<!--div3.--------------------------------------------------------------------------------------------------------------->
+<div id="div3">
+    <input type="text" v-model="num1" size="2"/>
+    +
+    <input type="text" v-model="num2" size="2"/>
+    =
+    <span>{{num3}}</span>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+
+    //核心函数的4个作用
+    $(function(){
+        //1.
+        alert("仙王临九天");
+
+        alert($("span").length); //3
+        //2.
+        $(" <div>"+" <span>div-span1</span>"+" <span>div-span2</span>"+" </div>").appendTo("body");
+
+        //3.
+        alert($("span").length); //5
+
+        var btnObj = document.getElementsByName("span");
+        alert(btnObj); //[object NodeList]
+        alert($(btnObj)); //[object Object]
+    });
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+<button id="btnid">我为天帝，当镇杀世间一切敌</button>
+<div>
+    <span>div-span1</span>
+    <span>div-span2</span>
+    <span>div-span3</span>
+</div>
+
+</body>
+</html>
+<!--
+核心函数的4个作用 $();
+1.传入参数为[函数]时,在文档加载完成后执行这个函数
+2.传入参数为[HTML字符串]时,根据这个字符串创建元素节点对象
+3.传入参数为[选择器字符串]时,根据这个字符串查找元素节点对象
+    $("#id属性值");    id选择器，根据id查询标签对象
+    $("标签名");       标签名选择器，根据指定的标签名查询标签对象
+    $(".class属性值"); 类型选择器，可以根据class属性查询标签对象
+
+4.传入参数为[函数]时,将DOM对象包装为jQuery对象返回
+会把这个dom对象转化为jQuery对象
+
+-->

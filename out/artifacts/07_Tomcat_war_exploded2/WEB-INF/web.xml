@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+    <!--context-param是上下文参数（它属于整个web工程）   -->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>context</param-value>
+    </context-param>
+    <!--可配置多组    -->
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>abc123</param-value>
+    </context-param>
+
+
+    <!-- servlet标签给Tomcat配置Servlet程序   -->
+    <servlet>
+        <!--servlet-name标签Servlet程序起一个别名（一般是类名）   -->
+        <servlet-name>ServletText</servlet-name>
+        <!--servlet-class是Servlet程序的全类名 （java中的全类名指的是全限定类名，相当于包名+类名。）  -->
+        <servlet-class>_02_Servlet.ServletText</servlet-class>
+
+        <!--init-param是初始化参数  -->
+        <init-param>
+            <!-- 参数名-->
+            <param-name>user</param-name>
+            <!-- 参数值    -->
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <!-- 参数名-->
+            <param-name>url</param-name>
+            <!-- 参数值    -->
+            <param-value>jdbc:mysql://localhost:3306/test</param-value>
+        </init-param>
+
+    </servlet>
+
+    <!--servlet-mapping标签给servlet程序配置访问地址    -->
+    <servlet-mapping>
+        <!-- servlet-name标签的作用是告诉服务器，我当前配置的地址给哪个Servlet程序使用       -->
+        <servlet-name>ServletText</servlet-name>
+        <!--url-pattern标签配置访问地址
+            / 斜杠在服务器解析的时候，表示地址为：http://ip:port/工程路径
+            /Text表示地址为：http://ip:port/工程路径/hello
+         -->
+        <url-pattern>/Text</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>HttpServletText</servlet-name>
+        <servlet-class>_02_Servlet.HttpServletText</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>HttpServletText</servlet-name>
+        <url-pattern>/Text2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Text</servlet-name>
+        <servlet-class>_02_Servlet.Text</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Text</servlet-name>
+        <url-pattern>/Text3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>_02_Servlet.ContextServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/ContextServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextServlet2</servlet-name>
+        <servlet-class>_02_Servlet.ContextServlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextServlet2</servlet-name>
+        <url-pattern>/ContextServlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>_1_View</servlet-name>
+        <servlet-class>_04_HttpServletRequest._1_View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>_1_View</servlet-name>
+        <url-pattern>/HttpServletRequest1</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ParameterServlet</servlet-name>
+        <servlet-class>_04_HttpServletRequest.ParameterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParameterServlet</servlet-name>
+        <url-pattern>/ParameterServlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ServletChange1</servlet-name>
+    <servlet-class>_04_HttpServletRequest.ServletChange1</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>ServletChange1</servlet-name>
+        <url-pattern>/ServletChange1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletChange2</servlet-name>
+        <servlet-class>_04_HttpServletRequest.ServletChange2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletChange2</servlet-name>
+        <url-pattern>/ServletChange2</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ForwardC</servlet-name>
+        <servlet-class>_04_HttpServletRequest.ForwardC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardC</servlet-name>
+        <url-pattern>/ForwardC</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>_1_View_2</servlet-name>
+        <servlet-class>_05_HttpServletResponse._1_View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>_1_View_2</servlet-name>
+        <url-pattern>/_1_View_2</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>Response1</servlet-name>
+        <servlet-class>_05_HttpServletResponse.Response1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Response1</servlet-name>
+        <url-pattern>/Response1</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Response2</servlet-name>
+        <servlet-class>_05_HttpServletResponse.Response2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Response2</servlet-name>
+        <url-pattern>/Response2</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
+
+<!--
+常见错误1：url-pattern中配置的路径没有以斜杠开头
+
+常见错误2：servlet-name配置的值不存在
+
+常见错误3：servlet-class标签的全类名配置错误
+-->

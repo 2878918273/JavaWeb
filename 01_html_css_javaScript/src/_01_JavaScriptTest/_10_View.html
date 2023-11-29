@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            //现在我们需要使用js代码来创建html标签，并显示在页面上
+            //标签的内容就是：<div>帝落时代，无人敢称尊</div>
+            var divObj = document.createElement("div"); //此时<div></>div>还在内存中
+            divObj.innerHTML = "帝落时代，无人敢称尊"; // <div>帝落时代，无人敢称尊</div> 但，还只是在内存中
+            //添加子元素
+            document.body.appendChild(divObj);
+            //注意：因程序按顺序运行，应加上window.onload = function(){}
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+<!--
+document对象补充说明
+-->

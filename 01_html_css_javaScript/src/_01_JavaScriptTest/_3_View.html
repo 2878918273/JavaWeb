@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*
+        需求：当用户点击了校验按钮，要获取输出框中的内容，然后验证其是否合法。<br />
+        验证的规则是：必须由字母，数字，下划线组成，并且长度是5到12位的
+        */
+        function onclickFun(){
+            // 1.当我们要操作一个标签的时候，一定要先获取这个标签对象。
+            var username = document.getElementById("username");
+
+            var userVlaue = username.value;
+            // 如何验证字符串符合某个规则，需要使用正则表达式
+            var patt = /^\w{5,12}$/;
+
+            /*
+            test()方法用于测试某个字符串是不是匹配我的规则
+            匹配就返回true，不匹配就返回false
+            */
+
+            var usernamespanObj = document.getElementById("usernamespan");
+            //innerHTML 表示起始标签和结束标签中的内容
+            //innerHTML 这个属性可读，可写
+            // usernamespanObj.innerHTML = "嗨嗨嗨";
+
+
+            if(patt.test(userVlaue)){
+                // alert("用户名合法");
+                usernamespanObj.innerHTML = "用户名合法";
+            }else{
+                // alert("用户名不合法");
+                usernamespanObj.innerHTML = "用户名不合法";
+            }
+
+        }
+    </script>
+
+
+
+</head>
+<body>
+    用户名：<input type="text" id="username" value="wx" />
+    <span style="color:red" id="usernamespan"></span>
+    <button onclick="onclickFun()">校验</button>
+</body>
+</html>
+
+<!--
+Document对象的理解
+  第一点：Document它管理了所有的HTML文档内容
+  第二点：document它是一种树形结构的文档，有层级关系。
+  第三点：它让我们把所有的标签都对象化
+  第四点。我们可以通过document访问所有的标签对象。
+
+Document对象中的方法介绍(*****重点)
+
+document.getElementById(elementId)   返回对拥有指定id的第一个对象的引用
+通过标签的id属性查找dom对象，elementId是标签的id属性值
+
+document.getElmentsByName(elementName)   返回带有指定名称的对象集合
+通过标签的name属性查找标签dom对象,elementName标签的name属性值
+
+document.getElementsByTagName(tagname)    返回带有指定标签名的对象集合
+通过标签名查找dom对象，tagname是标签名
+
+document.createElement(tagName)
+方法，通过给定的标签名，创建一个标签对象。tagName是要创建的标签名
+
+
+P56两种常见的验证提示效果
+
+-->：
